@@ -177,8 +177,8 @@ if ( ! class_exists( 'YITH_WCWL_Admin_Init' ) ) {
             $this->tab     = __( 'Wishlist', 'yit' );
             $this->available_tabs = apply_filters( 'yith_wcwl_available_admin_tabs', array(
                 'settings' => __( 'Settings', 'yit' ),
-                'colors' => __( 'Colors', 'yit' ),
-                'premium' => __( 'Premium Version', 'yit' )
+                //'colors' => __( 'Colors', 'yit' ),
+                //'premium' => __( 'Premium Version', 'yit' )
             ) );
             $this->default_tab = apply_filters( 'yith_wcwl_default_admin_tab', $this->default_tab );
 
@@ -902,6 +902,7 @@ if ( ! class_exists( 'YITH_WCWL_Admin_Init' ) ) {
 
             $general_settings_start = array(
 
+                /*
                 'section_general_settings_videobox' => array(
                     'name'    => __( 'Upgrade to the PREMIUM VERSION', 'yit' ),
                     'type'    => 'videobox',
@@ -923,7 +924,7 @@ of YITH WOOCOMMERCE WISHLIST to benefit from all features!', 'yit' ),
                         )
                     ),
                     'id'      => 'yith_wcwl_general_videobox'
-                ),
+                ),*/
 
                 'general_section_start' => array(
                     'name' => __( 'General Settings', 'yit' ),
