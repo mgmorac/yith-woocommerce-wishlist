@@ -60,7 +60,7 @@ jQuery( document ).ready( function( $ ){
     /**
      * Adds selectbox where needed
      */
-    $( 'select.selectBox' ).selectBox();
+    /*$( 'select.selectBox' ).selectBox();*/
 
     /**
      * Add a product in the wishlist.
@@ -113,7 +113,7 @@ jQuery( document ).ready( function( $ ){
 
                 if( yith_wcwl_l10n.multi_wishlist && yith_wcwl_l10n.is_user_logged_in ) {
                     var wishlist_select = $( 'select.wishlist-select' );
-                    $.prettyPhoto.close();
+                    /*$.prettyPhoto.close();*/
 
                     wishlist_select.each( function( index ){
                         var t = $(this),

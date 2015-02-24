@@ -266,15 +266,16 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
                 'wishlist.css'
             ) );
 
-            wp_register_style( 'woocommerce_prettyPhoto_css', $assets_path . 'css/prettyPhoto.css' );
-            wp_register_style( 'jquery-selectBox', YITH_WCWL_URL . 'assets/css/jquery.selectBox.css' );
-            wp_register_style( 'yith-wcwl-main', YITH_WCWL_URL . 'assets/css/style.css' );
-            wp_register_style( 'yith-wcwl-user-main', str_replace( get_template_directory(), get_template_directory_uri(), $located ) );
-            wp_register_style( 'yith-wcwl-font-awesome', YITH_WCWL_URL . 'assets/css/font-awesome.min.css' );
+            //wp_register_style( 'woocommerce_prettyPhoto_css', $assets_path . 'css/prettyPhoto.css' );
+            //wp_register_style( 'jquery-selectBox', YITH_WCWL_URL . 'assets/css/jquery.selectBox.css' );
+            //wp_register_style( 'yith-wcwl-main', YITH_WCWL_URL . 'assets/css/style.css' );
+            //wp_register_style( 'yith-wcwl-user-main', str_replace( get_template_directory(), get_template_directory_uri(), $located ) );
+            //wp_register_style( 'yith-wcwl-font-awesome', YITH_WCWL_URL . 'assets/css/font-awesome.min.css' );
 
-            wp_enqueue_style( 'woocommerce_prettyPhoto_css' );
-            wp_enqueue_style( 'jquery-selectBox' );
+            //wp_enqueue_style( 'woocommerce_prettyPhoto_css' );
+            //wp_enqueue_style( 'jquery-selectBox' );
 
+            /*
             if ( ! $located ) {
                 wp_enqueue_style( 'yith-wcwl-main' );
             }
@@ -300,17 +301,9 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
                     $frontend_css .= $rule . '{' . $colors_styles[$id] . '}';
                 }
             }
+            */
 
             ?>
-            <style>
-                <?php
-                echo get_option( 'yith_wcwl_custom_css' ) . $frontend_css;
-
-                if( get_option( 'yith_wcwl_rounded_corners' ) == 'yes' ) {
-                    echo '.wishlist_table .add_to_cart, a.add_to_wishlist.button.alt { border-radius: 16px; -moz-border-radius: 16px; -webkit-border-radius: 16px; }';
-                }
-                ?>
-            </style>
             <script type="text/javascript">
                 var yith_wcwl_plugin_ajax_web_url = '<?php echo admin_url('admin-ajax.php') ?>';
                 var login_redirect_url = '<?php echo wp_login_url() . '?redirect_to=' . urlencode( $_SERVER['REQUEST_URI'] ) ?>';
@@ -329,10 +322,10 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
             $assets_path          = str_replace( array( 'http:', 'https:' ), '', $woocommerce->plugin_url() ) . '/assets/';
             $suffix               = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-            wp_enqueue_script( 'prettyPhoto', $assets_path . 'js/prettyPhoto/jquery.prettyPhoto' . $suffix . '.js', array( 'jquery' ), '3.1.5', true );
-            wp_enqueue_script( 'prettyPhoto-init', $assets_path . 'js/prettyPhoto/jquery.prettyPhoto.init' . $suffix . '.js', array( 'jquery','prettyPhoto' ), defined( 'WC_VERSION' ) ? WC_VERSION : WOOCOMMERCE_VERSION, true );
-            wp_enqueue_script( 'jquery-selectBox', YITH_WCWL_URL . 'assets/js/jquery.selectBox.min.js', array( 'jquery' ), false, true );
-            wp_register_script( 'jquery-yith-wcwl', YITH_WCWL_URL . 'assets/js/jquery.yith-wcwl.js', array( 'jquery', 'jquery-selectBox' ), '2.0', true );
+            //wp_enqueue_script( 'prettyPhoto', $assets_path . 'js/prettyPhoto/jquery.prettyPhoto' . $suffix . '.js', array( 'jquery' ), '3.1.5', true );
+            //wp_enqueue_script( 'prettyPhoto-init', $assets_path . 'js/prettyPhoto/jquery.prettyPhoto.init' . $suffix . '.js', array( 'jquery','prettyPhoto' ), defined( 'WC_VERSION' ) ? WC_VERSION : WOOCOMMERCE_VERSION, true );
+            //wp_enqueue_script( 'jquery-selectBox', YITH_WCWL_URL . 'assets/js/jquery.selectBox.min.js', array( 'jquery' ), false, true );
+            wp_register_script( 'jquery-yith-wcwl', YITH_WCWL_URL . 'assets/js/jquery.yith-wcwl.js', array( 'jquery'), '2.0', true );
             wp_enqueue_script( 'jquery-yith-wcwl' );
 
             $yith_wcwl_l10n = array(
