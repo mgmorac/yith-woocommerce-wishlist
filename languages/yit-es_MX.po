@@ -507,7 +507,7 @@ msgstr ""
 
 #: ../includes/class.yith-wcwl.php:325
 msgid "Error occurred while removing product from wishlist"
-msgstr "Ocurrió un erro mientras se eliminaba el producto a la Lista"
+msgstr "Ocurrió un erro disponilbe mientras se eliminaba el producto a la Lista"
 
 #: ../includes/class.yith-wcwl.php:603
 msgid "You need to log in before creating a new wishlist"
@@ -1489,7 +1489,7 @@ msgstr "Agotado"
 
 #: ../templates/wishlist-view.php:139
 msgid "In Stock"
-msgstr "Disponilbe."
+msgstr "Disponible."
 
 #: ../templates/wishlist-view.php:191
 msgid "Ask an estimate of costs"
